@@ -2,6 +2,9 @@ const Discord = require('discord.js');
 const dotenv = require('dotenv');
 const { EmbedBuilder } = require('discord.js');
 const { ActivityType } = require('discord.js');
+const { Collection } = require('discord.js');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const client = new Discord.Client({
     allowedMentions: {
@@ -22,64 +25,34 @@ const client = new Discord.Client({
 
 
 client.once('ready', () => {
-    client.user.setActivity('você digitar /build ! hehe', { type: ActivityType.Watching });
+    client.user.setActivity('você digitar /build !', { type: ActivityType.Watching });
     client.user.setStatus('online');
 	console.log('Ready!');
 });
 
+client.commands = new Collection();
+const commandsPath = path.join(__dirname, 'commands');
+const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'))
 
+for (const file of commandFiles) {
+	const filePath = path.join(commandsPath, file);
+	const command = require(filePath);
+    client.commands.set(command.data.name, command);
+}
 
 client.on('interactionCreate', async interaction => {
-	if (interaction.isChatInputCommand()) {
+	if (!interaction.isChatInputCommand()) return;
 
-	    const { commandName } = interaction;
+	const command = client.commands.get(interaction.commandName);
 
-	    if (commandName === 'ping') {
-	    	await interaction.reply('Pong!');
-	    } else if (commandName === 'server') {
-	    	await interaction.reply('Server info.');
-	    } else if (commandName === 'user') {
-	    	await interaction.reply(`Seu nick: ${interaction.user.tag}\nSeu id: ${interaction.user.id}`);
-	    } else if (commandName === 'guia') {
-            const guia = interaction.options.get('personagem').value;
-            if (guia === 'xiao') {
-            const EmbedXiao = new EmbedBuilder()
-            .setColor(0x002529)
-            .setAuthor({ name: 'Guia Xiao', iconURL: 'https://genshin.honeyhunterworld.com/img/char/xiao_face.png' })
-            .setDescription('Confira abaixo um guia resumido do Personagem Anemo, Xiao!')
-            .setThumbnail('https://genshin.honeyhunterworld.com/img/char/xiao.png')
-            .addFields(
-                { name: '\u200B', value: '\u200B' },
-                { name: 'Raridade', value: '<:5Star:954093937109401620><:5Star:954093937109401620><:5Star:954093937109401620><:5Star:954093937109401620><:5Star:954093937109401620>', inline: true },
-                { name: 'Elemento', value: 'Anemo', inline: true },
-            )
-            .addFields({ name: 'Arma', value: 'Lanceiro', inline: true })
-            .setImage('https://i.imgur.com/r1qt2YY.png')
-            .setTimestamp()
-            .setFooter({ text: '@genshin_brasil', iconURL: 'https://genshin.honeyhunterworld.com/img/icons/element/anemo_35.png' });
-    
-            await interaction.reply({ embeds: [EmbedXiao] });
-         
-        } else if (guia === 'shenhe') {
-            const EmbedShenhe = new EmbedBuilder()
-            .setColor(0x002529)
-            .setAuthor({ name: 'Guia Shenhe', iconURL: 'https://genshin.honeyhunterworld.com/img/char/shenhe_face.png' })
-            .setDescription('Confira abaixo um guia resumido da Personagem Cryo, Shenhe!')
-            .setThumbnail('https://genshin.honeyhunterworld.com/img/char/shenhe.png')
-            .addFields(
-            { name: '\u200B', value: '\u200B' },
-            { name: 'Raridade', value: '<:5Star:954093937109401620><:5Star:954093937109401620><:5Star:954093937109401620><:5Star:954093937109401620><:5Star:954093937109401620>', inline: true },
-            { name: 'Elemento', value: 'Cryo', inline: true },
-        )
-        .addFields({ name: 'Arma', value: 'Lanceira', inline: true })
-        .setImage('https://i.imgur.com/n31x8Qe.png')
-        .setTimestamp()
-        .setFooter({ text: '@genshin_brasil', iconURL: 'https://genshin.honeyhunterworld.com/img/icons/element/cryo_35.png' });
-    
-        await interaction.reply({ embeds: [EmbedShenhe] });
-        } 
-    } 
-    }}
-);
+	if (!command) return;
 
-client.login('TOKEN')
+	try {
+		await command.execute(interaction);
+	} catch (error) {
+		console.error(error);
+		await interaction.reply({ content: 'Erro ao executar seu comando!', ephemeral: true });
+	}
+});
+
+client.login('MTAwMTYzMzM5MzA3MjY4NTEyOA.GurKB5.fGKWRlhRgLyyrPO_tn8PRzSFErsx1rceqRO5vQ')
