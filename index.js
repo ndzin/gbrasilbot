@@ -82,4 +82,4 @@ client.on('interactionCreate', async interaction => {
     }}
 );
 
-client.login('MTAwMTYzMzM5MzA3MjY4NTEyOA.GQPy2z.XICsgBs2DEIgzeBXv8ZXTqVL-afvnlrBMK6_RU')
+client.login('TOKEN')
