@@ -6,6 +6,7 @@ const { Collection } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
 const { waitForDebugger } = require('node:inspector');
+const wait = require('node:timers/promises').setTimeout;
 
 const client = new Discord.Client({
     allowedMentions: {
@@ -83,6 +84,9 @@ client.on('interactionCreate', async interaction => {
 		console.error(error);
 		await interaction.reply({ content: 'Erro ao executar seu comando!', ephemeral: true });
 	}
+
+    if (!interaction.isButton()) return;
+
 });
 
-client.login('MTAwMTYzMzM5MzA3MjY4NTEyOA.GPe5hU.H662mITtUr7IrdpatDvUeADSjekAje-qEWvT4Y')
+client.login('FLAMENGO')
