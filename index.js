@@ -30,6 +30,8 @@ const prefix = "!"
 client.once('ready', () => {
     client.user.setActivity('você digitar /build !', { type: ActivityType.Watching });
     client.user.setStatus('online');
+    console.log('Iniciando bot, aguarde.');
+    wait(3000);
 	console.log('Ready!');
 });
 

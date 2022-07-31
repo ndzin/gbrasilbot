@@ -243,7 +243,7 @@ const EmbedGanyuF = new EmbedBuilder()
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
-    const EmbedGanyuM = new EmbedBuilder()
+const EmbedGanyuM = new EmbedBuilder()
     .setColor(0x002b4e)
     .setAuthor({ name: 'Ganyu ✦ Melt Main DPS Build' })
     .setDescription('*Secretária do Pavilhão Yuehai. O sangue da besta iluminada Qilin flui nas suas veias.*')
@@ -257,18 +257,221 @@ const EmbedGanyuF = new EmbedBuilder()
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
+//electro
+
+const EmbedKeqing = new EmbedBuilder()
+    .setColor(0x201646)
+    .setAuthor({ name: 'Keqing ✦ DPS Build' })
+    .setDescription('*Keqing é a Yuheng do Qixing de Liyue. Ela é alguém que procura suas próprias respostas ao invés de deixar o caos acontecer em Liyue. Keqing escolhe seu próprio caminho com seu próprio poder e habilidade, ao invés de deixar os Deuses escolherem seu caminho.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/keqing.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Espada', inline: true })
+    .setImage('https://i.imgur.com/MEwqcxw.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedShogun = new EmbedBuilder()
+    .setColor(0x32215b)
+    .setAuthor({ name: 'Raiden Shogun ✦ Battery Build' })
+    .setDescription('*Sua Excelência, a Toda Poderosa Narukami Ogosho, que prometeu ao povo de Inazuma uma Eternidade imutável.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/shougun.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Lança', inline: true })
+    .setImage('https://i.imgur.com/tC7jLyv.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedYaeMiko = new EmbedBuilder()
+    .setColor(0x4e2638)
+    .setAuthor({ name: 'Yae Miko ✦ Main DPS Build' })
+    .setDescription('*A Sacerdotisa do Grande Santuário Narukami, descendente da linhagem Kitsune, amiga próxima da "Enternidade" e a editora-chefe intimidadora da Editora Yae, uma editora de Romances Literários.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/yaemiko.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
+    .setImage('https://i.imgur.com/0lvi7ZC.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedBeidou = new EmbedBuilder()
+    .setColor(0x2d1c4e)
+    .setAuthor({ name: 'Beidou ✦ Main DPS Build' })
+    .setDescription('*Ela é a capitã da Frota Crux . Além de suas capacidades como capitã de frota e sua força imensa, muitos em Liyue a conhecem por sua falta de medo em relação ao Tianquan dos Qixing, Ningguang - uma característica que a outra mulher aprecia, mas fica irritada.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/beidou.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Espadão', inline: true })
+    .setImage('https://i.imgur.com/Zkuwbji.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedFischl = new EmbedBuilder()
+    .setColor(0x28153d)
+    .setAuthor({ name: 'Fischl ✦ Sub DPS Build' })
+    .setDescription('*Uma mulher misteriosa que se auto-intitula de "Prinzessin der Verurteilung" e viaja com um corvo chamado de Oz.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/fischl.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Arco', inline: true })
+    .setImage('https://i.imgur.com/sttRqG6.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedShinobu = new EmbedBuilder()
+    .setColor(0x150421)
+    .setAuthor({ name: 'Kuki Shinobu ✦ Sustain Build' })
+    .setDescription('*Vice-líder da Gangue Arataki. Usa uma máscara de estilo único com expressões bastante sérias. São poucas as pessoas que sabem o motivo pela qual um talento desse calibre fugiria para se juntar a uma gangue de rua, e menos ainda são as pessoas que conhecem o que ela esconde sob sua máscara.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/shinobu.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Espada', inline: true })
+    .setImage('https://i.imgur.com/ozhkDex.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedLisa = new EmbedBuilder()
+    .setColor(0x39224c)
+    .setAuthor({ name: 'Lisa ✦ Enabler Build' })
+    .setDescription('*Ela é uma bruxa intelectual que adora dormir. Como administradora da Biblioteca de Ordo Favonius, Lisa sempre consegue encontrar a maneira mais eficaz para resolver todos os problemas. Apesar de parecer preguiçosa, não teme nada e mantém tudo sob controle.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/lisa.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
+    .setImage('https://i.imgur.com/5EaoXHV.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedRazor = new EmbedBuilder()
+    .setColor(0x211035)
+    .setAuthor({ name: 'Razor ✦ DPS Build' })
+    .setDescription('*Abandonado quando criança, Razor foi acolhido pelo Lobo do Norte, Andrius, e criado por sua matilha de lobos no Reino dos Lobos. Após um encontro casual com Varka, o atual Grande Mestre dos Cavaleiros de Favonius e Cavaleiro de Boreas, ele começou a se integrar aos humanos novamente.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/razor.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Espadão', inline: true })
+    .setImage('https://i.imgur.com/aZqPSoX.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedSara = new EmbedBuilder()
+    .setColor(0x16091e)
+    .setAuthor({ name: 'Kujou Sara ✦ Burst DPS Build' })
+    .setDescription('*General da Comissão Tenryou. Ela é uma garota atraente, com uma personalidade muitas vezes comparada com o vento, e que nunca volta atrás das próprias palavras.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/sara.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Arco', inline: true })
+    .setImage('https://i.imgur.com/T6jCBdD.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+//geo
+
+const EmbedAlbedo = new EmbedBuilder()
+    .setColor(0x2f2930)
+    .setAuthor({ name: 'Albedo ✦ Sub DPS Build' })
+    .setDescription('*O misterioso Albedo é o Chefe Alquimista e Capitão da Equipe de Investigação dos Cavaleiros de Favonius, com Sucrose como sua assistente. Ele tem um desejo infinito de aprender sobre o mundo de Teyvat, estudando cuidadosamente todos os objetos ao seu redor.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/albedo.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Geo', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Espada', inline: true })
+    .setImage('https://i.imgur.com/qI3ojxz.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedItto = new EmbedBuilder()
+    .setColor(0x251714)
+    .setAuthor({ name: 'Arataki Itto ✦ Main DPS Build' })
+    .setDescription('*Arataki Itto é conhecido por sua rivalidade unilateral com Kujou Sara depois que ela o derrotou e tomou sua Visão. Um descendente do oni carmesim, Itto também é o líder e fundador da Gangue Arataki.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/itto.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Geo', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Espadão', inline: true })
+    .setImage('https://i.imgur.com/iNAHixS.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedZhongli = new EmbedBuilder()
+    .setColor(0x241c17)
+    .setAuthor({ name: 'Zhongli ✦ Sustain Build' })
+    .setDescription('*Um consultor misterioso da Funerária de Wangsheng, que possui uma aparência bonita, um comportamento bem-educado e a sabedoria além do alcance de qualquer pessoa. Mesmo que não se sabe de onde ele vem, ele conhece tão bem as regras locais. Como o consultor da Funerária de Wangsheng, ele pode executar todos os tipos de Rituais*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/zhongli.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Geo', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Lança', inline: true })
+    .setImage('https://i.imgur.com/aJzf2Ry.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedGorou = new EmbedBuilder()
+    .setColor(0x683106)
+    .setAuthor({ name: 'Gorou ✦ Enabler Build' })
+    .setDescription('*General de Watatsumi, ganhou respeito e prestígio por possuir a majestade de um líder, mas que permanece humilde. Confiado por todos os subordinados, ele é um companheiro com quem você pode abrir seu coração sem se preocupar com nada.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/gorou.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Geo', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Arco', inline: true })
+    .setImage('https://i.imgur.com/Kl5J0wf.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedNingguang = new EmbedBuilder()
+    .setColor(0x281804)
+    .setAuthor({ name: 'Ningguang ✦ Main DPS Build' })
+    .setDescription('*Ningguang é o Tianquan dos Qixing de Liyue. Ela detém uma posição de riqueza além de muitas outras em Teyvat. A posição e as habilidades de Ningguang permitiram que ela construísse sua maior conquista, a flutuante Câmara de Jade que zela por toda Liyue.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/ningguang.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Geo', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
+    .setImage('https://i.imgur.com/EhqKfVj.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedYunjin = new EmbedBuilder()
+    .setColor(0x261d3b)
+    .setAuthor({ name: 'Yunjin ✦ Enabler Build' })
+    .setDescription('*Yunjin é a diretora atual da Trupe de Ópera Yun-Han, e também é uma figura muito conhecida no Porto de Liyue. Uma dançarina, cantora e compositora de prestígio que se apresenta na Casa de Chá Heyu.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/yunjin.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Geo', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Lança', inline: true })
+    .setImage('https://i.imgur.com/cBkBGIM.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
 
 
-
-    const ganyubuild = new ActionRowBuilder()
-    .addComponents(
-        new ButtonBuilder()
-            .setCustomId('ganyubuild')
-            .setLabel('Alternar Build')
-            .setStyle(ButtonStyle.Primary),
-    );
-
-    const filter = i => i.customId === 'primary' && i.user.id === '122157285790187530';
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -277,56 +480,34 @@ module.exports = {
         .addStringOption(option =>
 		option.setName('personagem')
 		.setDescription('Guia do Personagem:')
-		.setRequired(true)
-		.addChoices(
-            //anemo
-
-            { name: 'Jean', value: 'jean' },
-            { name: 'Kaedehara Kazuha', value: 'kazuha' },
-            { name: 'Venti', value: 'venti' },
-			{ name: 'Xiao', value: 'xiao' },		
-            { name: 'Sayu', value: 'sayu' },    	
-			{ name: 'Shikanoin Heizou', value: 'heizou' },                        
-            { name: 'Sucrose', value: 'sucrose' },
-            //cryo
-
-            { name: 'Aloy', value: 'aloy' },
-			{ name: 'Eula', value: 'eula' },
-			{ name: 'Ganyu', value: 'ganyu' },
-            { name: 'Kamisato Ayaka', value: 'ayaka' },
-            { name: 'Qiqi', value: 'qiqi' },
-            { name: 'Shenhe', value: 'shenhe' },
-            { name: 'Chongyun', value: 'chongyun' },
-            { name: 'Diona', value: 'diona' },
-            { name: 'Kaeya', value: 'kaeya' },
-            { name: 'Rosaria', value: 'rosaria' },
-		)),
+		.setRequired(false)
+		),
         async execute(interaction) {
             const build = interaction.options.get('personagem').value;
             //anemo
 
-            if (build === 'xiao') {    
+            if (build === 'Xiao') {    
                 await interaction.reply({ embeds: [EmbedXiao] });
-            } else if (build === 'jean') {
+            } else if (build === 'Jean') {
                 await interaction.reply({ embeds: [EmbedJean] });
-            } else if (build === 'heizou') {
+            } else if (build === 'Heizou') {
                 await interaction.reply({ embeds: [EmbedHeizou] });
-            } else if (build === 'kazuha') {
+            } else if (build === 'Kazuha') {
                 await interaction.reply({ embeds: [EmbedKazuha] });
-            } else if (build === 'sayu') {
+            } else if (build === 'Sayu') {
                 await interaction.reply({ embeds: [EmbedSayu] });
-            } else if (build === 'venti') {
+            } else if (build === 'Venti') {
                 await interaction.reply({ embeds: [EmbedVenti] });
-            } else if (build === 'sucrose') {
+            } else if (build === 'Sucrose') {
                 await interaction.reply({ embeds: [EmbedSucrose] });
             } 
             //cryo
 
-            else if (build === 'aloy') {
+            else if (build === 'Aloy') {
                 await interaction.reply({ embeds: [EmbedAloy] });
-            } else if (build === 'eula') {
+            } else if (build === 'Eula') {
                 await interaction.reply({ embeds: [EmbedEula] });
-            } else if (build === 'ganyu') {
+            } else if (build === 'Ganyu') {
                 const message = await interaction.reply({ embeds: [EmbedGanyuF], fetchReply: true });
                 message.react('➡️')
                 const filter = (reaction, user) => {
@@ -336,22 +517,57 @@ module.exports = {
                     .then(collected => {
                         message.edit({ embeds: [EmbedGanyuM], fetchReply: true })
                             .then(() => message.reactions.removeAll())
-                });
-                
-            } else if (build === 'ayaka') {
+                });    
+            } else if (build === 'Ayaka') {
                 await interaction.reply({ embeds: [EmbedAyaka] });
-            } else if (build === 'qiqi') {
+            } else if (build === 'Qiqi') {
                 await interaction.reply({ embeds: [EmbedQiqi] });
-            } else if (build === 'shenhe') {
+            } else if (build === 'Shenhe') {
                 await interaction.reply({ embeds: [EmbedShenhe] });
-            } else if (build === 'chongyun') {
+            } else if (build === 'Chongyun') {
                 await interaction.reply({ embeds: [EmbedChongyun] });
-            } else if (build === 'diona') {
+            } else if (build === 'Diona') {
                 await interaction.reply({ embeds: [EmbedDiona] });
-            } else if (build === 'kaeya') {
+            } else if (build === 'Kaeya') {
                 await interaction.reply({ embeds: [EmbedKaeya] });
-            } else if (build === 'rosaria') {
-                await interaction.reply({ embeds: [EmbedRosaria] });
             } 
+            //electro
+            
+            else if (build === 'Keqing') {
+                await interaction.reply({ embeds: [EmbedKeqing] });
+            } else if (build === 'Raiden Shogun') {
+                await interaction.reply({ embeds: [EmbedShogun] });
+            }else if (build === 'Yae Miko') {
+                await interaction.reply({ embeds: [EmbedYaeMiko] });
+            }else if (build === 'Beidou') {
+                await interaction.reply({ embeds: [EmbedBeidou] });
+            }else if (build === 'Fischl') {
+                await interaction.reply({ embeds: [EmbedFischl] });
+            }else if (build === 'Lisa') {
+                await interaction.reply({ embeds: [EmbedLisa] });
+            }else if (build === 'Razor') {
+                await interaction.reply({ embeds: [EmbedRazor] });
+            }else if (build === 'Kujou Sara') {
+                await interaction.reply({ embeds: [EmbedSara] });
+            }else if (build === 'Shinobu') {
+                await interaction.reply({ embeds: [EmbedShinobu] });
+            }
+            //geo
+
+            else if (build === 'Albedo') {
+                await interaction.reply({ embeds: [EmbedAlbedo] });
+            }else if (build === 'Itto') {
+                await interaction.reply({ embeds: [EmbedItto] });
+            }else if (build === 'Zhongli') {
+                await interaction.reply({ embeds: [EmbedZhongli] });
+            }else if (build === 'Gorou') {
+                await interaction.reply({ embeds: [EmbedGorou] });
+            }else if (build === 'Ningguang') {
+                await interaction.reply({ embeds: [EmbedNingguang] });
+            }else if (build === 'Noelle') {
+                await interaction.reply({ embeds: [EmbedNoelle] });
+            }else if (build === 'Yunjin') {
+                await interaction.reply({ embeds: [EmbedYunjin] });
+            }
         },
 };
