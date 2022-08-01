@@ -1,0 +1,13 @@
+const { SlashCommandBuilder } = require('discord.js');
+
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName('servermap')
+        .setDescription('Envia a mensagem do mapa do servidor!'),
+        async execute(interaction) { 
+                await interaction.reply({ content: '.', ephemeral: false });
+                await interaction.deleteReply();
+                await interaction.followUp('**Servidor oficial da @genshin_brasil, acompanhe a melhor comunidade de Genshin Impact do Brasil e fique por dentro de vazamentos, avisos, eventos e tenha acesso antecipado aos diversos guias que fazemos!**\n\n<:xlupa:979594081829281792>  Mapa do servidor:\n\n<:xmedalha:979594025524949092>  Informações sobre o servidor:\nConverse com pessoas no: <#994744835862970433>\nDivulgue e promova conosco: <#996483570627530802>\n Siga-nos no Instagram e Twitter: @genshin_brasil;');
+                await interaction.followUp('🍥 **Convide seus amigos:** https://discord.gg/FgFW4sXmhq');
+            }
+} 
