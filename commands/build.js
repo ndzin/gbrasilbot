@@ -473,6 +473,79 @@ const EmbedYunjin = new EmbedBuilder()
 
 
 
+
+        //hydro
+
+const EmbedAyato = new EmbedBuilder()
+    .setColor(0x001240)
+    .setAuthor({ name: 'Kamisato Ayato ✦ Main DPS Build' })
+    .setDescription('*O jovem promissor e chefe atual da Comissão Yashiro e do Clã Kamisato, é culto e educado, e sempre tem uma forma de fazer as coisas.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/ayato.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Hydro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Espada', inline: true })
+    .setImage('https://i.imgur.com/V4eNyGN.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedKokomi = new EmbedBuilder()
+    .setColor(0x091a2d)
+    .setAuthor({ name: 'Sangonomiya Kokomi ✦ Sustain Build' })
+    .setDescription('*Sacerdotisa Divina da Ilha Watatsumi, Kokomi serve sua terra como líder suprema.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/kokomi.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Hydro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
+    .setImage('https://i.imgur.com/P39crpH.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedMonaNUKE = new EmbedBuilder()
+    .setColor(0x191737)
+    .setAuthor({ name: 'Ast Mona ✦ Nuke DMG Build' })
+    .setDescription('*Astróloga de grande habilidade e igualmente grande orgulho, Mona fixou residência em Mondstadt para evitar incorrer na ira de sua mestra depois de ler inadvertidamente o diário dela.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/mona.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Hydro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
+    .setImage('https://i.imgur.com/9zs9P7q.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedMonaF = new EmbedBuilder()
+    .setColor(0x191737)
+    .setAuthor({ name: 'Ast Mona ✦ Enabler Build' })
+    .setDescription('*Astróloga de grande habilidade e igualmente grande orgulho, Mona fixou residência em Mondstadt para evitar incorrer na ira de sua mestra depois de ler inadvertidamente o diário dela.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/mona.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Hydro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
+    .setImage('https://i.imgur.com/9BLVACP.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
+const EmbedTartaglia = new EmbedBuilder()
+    .setColor(0x241417)
+    .setAuthor({ name: 'Tartaglia ✦ Enabler Build' })
+    .setDescription('*Childe é o Nº 11 dos Onze Mensageiros dos Fatui. Seguindo o perigo onde quer que vá, Childe está sempre ansioso por um desafio. Ele é considerado um dos membros mais perigosos dos Mensageiros.*')
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/char/tartaglia.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Hydro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Arco', inline: true })
+    .setImage('https://i.imgur.com/ZxQPgnM.jpg')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('build')
@@ -509,15 +582,23 @@ module.exports = {
                 await interaction.reply({ embeds: [EmbedEula] });
             } else if (build === 'Ganyu') {
                 const message = await interaction.reply({ embeds: [EmbedGanyuF], fetchReply: true });
+                message.react('⬅️')
                 message.react('➡️')
                 const filter = (reaction, user) => {
-                    return reaction.emoji.name === '➡️' && user.id == interaction.user.id
+                    return reaction.emoji.name && user.id == interaction.user.id
                 };
-                message.awaitReactions({filter, time: 5000})
-                    .then(collected => {
+
+                const collector = message.createReactionCollector({filter, time: 60000});
+
+                collector.on('collect', (reaction, user) => {
+                    console.log(reaction.emoji.name, user.tag)
+                    if (reaction.emoji.name === '➡️') {
                         message.edit({ embeds: [EmbedGanyuM], fetchReply: true })
-                            .then(() => message.reactions.removeAll())
-                });    
+                    } else {
+                        message.edit({ embeds: [EmbedGanyuF], fetchReply: true })
+                    }
+                });
+                   
             } else if (build === 'Ayaka') {
                 await interaction.reply({ embeds: [EmbedAyaka] });
             } else if (build === 'Qiqi') {
@@ -569,5 +650,39 @@ module.exports = {
             }else if (build === 'Yunjin') {
                 await interaction.reply({ embeds: [EmbedYunjin] });
             }
+            //hydro
+
+            else if (build === 'Ayato') {
+                await interaction.reply({ embeds: [EmbedAyato] });
+            }else if (build === 'Kokomi') {
+                await interaction.reply({ embeds: [EmbedKokomi] });
+            }else if (build === 'Tartaglia') {
+                await interaction.reply({ embeds: [EmbedTartaglia] });
+            }else if (build === 'Yelan') {
+                await interaction.reply({ embeds: [EmbeYelan] });
+            }else if (build === 'Mona') {
+                const message = await interaction.reply({ embeds: [EmbedMonaNUKE], fetchReply: true });
+                message.react('⬅️')
+                message.react('➡️')
+                const filter = (reaction, user) => {
+                    return reaction.emoji.name && user.id == interaction.user.id
+                };
+
+                const collector = message.createReactionCollector({filter, time: 60000});
+
+                collector.on('collect', (reaction, user) => {
+                    console.log(reaction.emoji.name, user.tag)
+                    if (reaction.emoji.name === '➡️') {
+                        message.edit({ embeds: [EmbedMonaF], fetchReply: true })
+                    } else {
+                        message.edit({ embeds: [EmbedMonaNUKE], fetchReply: true })
+                    }
+                });
+            }else if (build === 'Barbara') {
+                await interaction.reply({ embeds: [EmbedBarbara] });
+            }else if (build === 'Xingqiu') {
+                await interaction.reply({ embeds: [EmbedXingqiu] });
+            }
+
         },
 };
