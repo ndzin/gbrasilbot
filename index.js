@@ -91,4 +91,4 @@ client.on('interactionCreate', async interaction => {
 
 });
 
-client.login('FLAMENGO')
+client.login('MTAwMTYzMzM5MzA3MjY4NTEyOA.Gf41dX.YmewcGGRs8dx5ui0OgiA9s8SVzZ_f8NT-vd-YI')
