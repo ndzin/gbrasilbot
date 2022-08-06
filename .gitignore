@@ -1,5 +1,6 @@
-node_modules/
-package-lock.json/
-start.bat/
-.env/
-config.json/
+
+package-lock.json
+start.bat
+.env
+config.json
+node_modules
