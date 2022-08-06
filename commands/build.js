@@ -753,6 +753,7 @@ module.exports = {
 		.setRequired(false)
 		),
         async execute(interaction) {
+            try {
             const buildget = interaction.options.get('personagem').value;
             const build = buildget.toLocaleLowerCase();
             //anemo
@@ -923,5 +924,9 @@ module.exports = {
                 await interaction.reply({ embeds: [EmbedYanfei] });
             }
 
+        } catch {
+            await interaction.reply('**・Comando utilizado de maneira errônea!**\n┗ *Para mais detalhes, digite **/help build.***');
+            }
         },
+
 };
