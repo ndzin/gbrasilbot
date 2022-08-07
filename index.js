@@ -6,8 +6,11 @@ const { Collection } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
 const wait = require('node:timers/promises').setTimeout;
-const { ActionRowBuilder, SelectMenuBuilder } = require('discord.js');
+const { ActionRowBuilder, SelectMenuBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { retry } = require('rxjs');
 require ('dotenv').config();
+
+
 
 
 const client = new Discord.Client({
@@ -27,12 +30,59 @@ const client = new Discord.Client({
     ],
 });
 
-const prefix = "!"
+const ROLES = {
+    vazamentos: '1001642578602643516',
+    codigos: '1001642579034652703',
+    avisos: '1001642578300645496',
+    eventos: '1001642577294000218',
+    servidor: '1001642576526450830'
+}
 
 client.once('ready', () => {
     client.user.setActivity('você digitar /build ! 💕', { type: ActivityType.Watching });
     client.user.setStatus('online');
-	console.log('Bot iniciado com sucesso. ⏩');
+    console.log('Bot iniciado com sucesso. ⏩');
+    //const channel = client.channels.cache.get('994744835183480988');
+    //const EmbedCargos = new EmbedBuilder()
+    //        .setColor(0x8e2cb1)
+    //        .setTitle('Notificações')
+    //        .setThumbnail('https://cdn.discordapp.com/attachments/994744837066731530/1003143693563351070/gegesgegesg.png')
+    //       .addFields(
+    //           { name: '**Selecione abaixo os cargos que você deseja receber atualizações sobre:**', value: '\nCaso queira revogar o acesso a algum cargo, entre em contato com <@407649282200436738>.', inline: false},
+    //            )
+    //        .setFooter({ text: '@genshin_brasil' });
+            //channel.send({ embeds: 
+            //    [EmbedCargos], 
+            //    components: [
+            //        new ActionRowBuilder().setComponents(
+            //            new ButtonBuilder()
+            //                .setCustomId('servidor')
+            //                .setLabel('Servidor')
+            //              .setStyle(ButtonStyle.Primary)
+            //                .setEmoji('🛡️'),
+            //                new ButtonBuilder()
+            //                .setCustomId('codigos')
+            //                .setLabel('Códigos')
+            //                .setStyle(ButtonStyle.Primary)
+            //                .setEmoji('🎁'),
+            //                new ButtonBuilder()
+            //                .setCustomId('avisos')
+            //                .setLabel('Avisos')
+            //                .setStyle(ButtonStyle.Primary)
+            //                .setEmoji('📢'),
+            //                new ButtonBuilder()
+            //                .setCustomId('eventos')
+            //                .setLabel('Eventos')
+            //                .setStyle(ButtonStyle.Primary)
+            //                .setEmoji('🎪'),
+            //                new ButtonBuilder()
+            //                .setCustomId('vazamentos')
+            //                .setLabel('Vazamentos')
+            //                .setStyle(ButtonStyle.Primary)
+            //                .setEmoji('🕵️'),
+            //    
+            //        )]
+            //});
 });
 
 client.on('messageCreate', msg => {
@@ -48,34 +98,6 @@ client.on('messageCreate', msg => {
     }
 });
 
-client.on('messageCreate', async msg => {
-    if (msg.content === '!leaks') {
-        const EmbedLeaks = new EmbedBuilder()
-            .setColor(0x8e2cb1)
-            .setTitle('Vazamentos')
-            .setThumbnail('https://cdn.discordapp.com/attachments/994744837066731530/1003143693563351070/gegesgegesg.png')
-            .addFields(
-                { name: '**Reaja com 🕵️ caso queira desbloquear acesso ao canal de Vazamentos:**', value: 'Caso queira revogar o acesso ao canal, entre em contato com <@407649282200436738>.'},
-            )
-            .setFooter({ text: '@genshin_brasil' });
-        const message = await msg.channel.send({embeds: [EmbedLeaks]});
-
-        message.react ('🕵️');
-        const filter = (reaction) => {
-            return reaction.emoji.name
-        };
-
-        const leaker = message.guild.roles.cache.find(roles => roles.name ==='Vazamentos');
-        const collector = message.createReactionCollector({filter, time: 0});
-
-        collector.on('collect', async (reaction, user) => {
-            console.log(reaction.emoji.name, user.tag)
-            if (reaction.emoji.name === '🕵️') {
-                await reaction.message.guild.members.cache.get(user.id).roles.add(leaker);
-            }
-        });
-    }
-});
 
 
 
@@ -178,17 +200,15 @@ client.on('interactionCreate', async interaction => {
 		await interaction.reply({ content: 'Erro ao executar seu comando!\nTente novamente conferindo a SINTAX do comando.\n\nCaso o erro persista, entre em contato com <@407649282200436738>', ephemeral: true });
 	}
 
-    //if (!interaction.isSelectMenu()) {
-        //const pron = interaction.customId.get('pronome').value
-        //console.log(pron)
-        //if (pron === 'ele') {
-            //interaction.reply({ content: 'teste' })
-
-        //}
-    //}
-
-
-
 });
+
+client.on('interactionCreate', async interaction => {
+    if (!interaction.isButton())
+        console.log(interaction)
+        const role = interaction.guild.roles.cache.get(ROLES[interaction.customId]);    
+            return interaction.member.roles.add(role)
+                .then(
+                interaction.reply({ content: `O cargo ${role} foi adicionado com sucesso!`, ephemeral: true}));
+        });
 
 client.login(process.env.TOKEN);
