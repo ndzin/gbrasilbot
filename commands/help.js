@@ -142,6 +142,16 @@ const EmbedPyro = new EmbedBuilder()
             )
             .setFooter({ text: '@genshin_brasil' , iconURL: 'https://genshin.honeyhunterworld.com/img/icons/element/pyro_35.png'});
 
+const EmbedBuild = new EmbedBuilder()
+            .setColor(0x8e2cb1)
+            .setTitle('Comando de Builds:')
+            .setDescription('A seguir você terá as opções do comando /build!\nPara seguir com o comando de ajuda, favor reagir no emoji ⏭️.\n\nAo iniciar o guia, reaja nos Elementos desejados.')
+            .setThumbnail('https://cdn.discordapp.com/attachments/994744837066731530/1003143693563351070/gegesgegesg.png')
+            .addFields(
+                { name: '**Formato:**', value: '/build personagem', inline: true} ,
+            )
+            .setFooter({ text: '@genshin_brasil' });
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('help')
@@ -160,7 +170,7 @@ module.exports = {
             if (help_command === 'build') {    
                 
 
-                const message = await interaction.reply({ embeds: [EmbedAnemo], fetchReply: true })
+                const message = await interaction.reply({ embeds: [EmbedBuild], fetchReply: true })
                 
                 const emojiAnemo   = message.guild.emojis.cache.find(emoji => emoji.name ==='0anemo');
                 const emojiCryo    = message.guild.emojis.cache.find(emoji => emoji.name ==='0cryo');
@@ -169,12 +179,9 @@ module.exports = {
                 const emojiHydro   = message.guild.emojis.cache.find(emoji => emoji.name ==='0hydro');
                 const emojiPyro    = message.guild.emojis.cache.find(emoji => emoji.name ==='0pyro');
 
-                message.react(emojiAnemo)
-                message.react(emojiCryo)
-                message.react(emojiElectro)
-                message.react(emojiGeo)
-                message.react(emojiHydro)
-                message.react(emojiPyro)
+                message.react('⏭️')
+
+                
 
                 const filter = (reaction, user) => {
                     return reaction.emoji.name && user.id == interaction.user.id
@@ -184,6 +191,18 @@ module.exports = {
 
                 collector.on('collect', (reaction, user) => {
                     console.log(reaction.emoji.name, user.tag)
+
+                    if (reaction.emoji.name === '⏭️') {
+                        message.reactions.removeAll()
+                        .then(() => message.edit({ embeds: [EmbedAnemo], fetchReply: true }))
+                        .then(() => message.react(emojiAnemo))
+                        .then(() => message.react(emojiCryo))
+                        .then(() => message.react(emojiElectro))
+                        .then(() => message.react(emojiGeo))
+                        .then(() => message.react(emojiHydro))
+                        .then(() => message.react(emojiPyro))
+                    }
+
                     if (reaction.emoji.name === '0cryo') {
                         message.edit({ embeds: [EmbedCryo], fetchReply: true })
                     } else 
