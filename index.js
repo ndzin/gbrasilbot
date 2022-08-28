@@ -5,9 +5,7 @@ const { ActivityType } = require('discord.js');
 const { Collection } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
-const wait = require('node:timers/promises').setTimeout;
 const { ActionRowBuilder, SelectMenuBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { retry } = require('rxjs');
 require('dotenv').config();
 
 
@@ -30,6 +28,8 @@ const client = new Discord.Client({
     ],
 });
 
+module.exports = client
+
 const ROLES = {
     vazamentos: '1001642578602643516',
     codigos: '1001642579034652703',
@@ -45,7 +45,7 @@ const PRONOME = {
 }
 
 client.once('ready', () => {
-    client.user.setActivity('você digitar /helpssssssss ! 💕', { type: ActivityType.Watching });
+    client.user.setActivity(`você digitar /help ! 💕`, { type: ActivityType.Watching });
     client.user.setStatus('online');
     // const channel = client.channels.cache.get('994744835183480988');
     // const EmbedCargos = new EmbedBuilder()
@@ -90,14 +90,14 @@ client.once('ready', () => {
 
 client.on('messageCreate', msg => {
     if (msg.content === '!servermap') {
-        msg.channel.send('**Servidor oficial da @genshin_brasil, acompanhe a melhor comunidade de Genshin Impact do Brasil e fique por dentro de vazamentos, avisos, eventos e tenha acesso antecipado aos diversos guias que fazemos!**\n\n<:xlupa:1002746774919856229>  Mapa do servidor:\n\n<:xmedalha:1002746809833230407>  Informações sobre o servidor:\nConverse com pessoas no: <#994744835862970433>\nDivulgue e promova conosco: <#996483570627530802>\nSiga-nos no Instagram e Twitter: @genshin_brasil;');
+        msg.channel.send('**Servidor oficial da Genshin Akademiya, acompanhe a melhor comunidade de Genshin Impact do Brasil e fique por dentro de avisos, eventos e tenha acesso antecipado aos diversos guias que fazemos!**\n\n<:xlupa:1002746774919856229>  Mapa do servidor:\n\n<:xmedalha:1002746809833230407>  Informações sobre o servidor:\nConverse com outros membros no: <#994744835862970433>\nDivulgue e promova conosco: <#996483570627530802>\nSiga-nos no Twitter: @genshin_brasil;');
         msg.channel.delete;
     }
 });
 
 client.on('messageCreate', msg => {
     if (msg.content === '!servermap2') {
-        msg.channel.send('🍥 **Convide seus amigos:** https://discord.gg/FgFW4sXmhq');
+        msg.channel.send('🍥 **Convide seus amigos:** https://discord.gg/akademiya');
     }
 });
 
@@ -152,8 +152,21 @@ client.on('messageCreate', msg => {
     }
 })
 
-client.on('guildMemberAdd', async member => {
+client.on('messageCreate', msg => {
+    if (msg.content === '!dev') {
+        
+    }
+})
 
+
+client.on('guildMemberRemove', async member => {
+    const membros = member.guild.memberCount;
+    client.user.setActivity(`${membros} membros na Akademiya!`, { type: ActivityType.Watching })
+
+})
+
+client.on('guildMemberAdd', async member => {
+    const membros = member.guild.memberCount;
 
     const EmbedWelcome = new EmbedBuilder()
         .setColor(0x8e2cb1)
@@ -164,7 +177,9 @@ client.on('guildMemberAdd', async member => {
             { name: '\u200B', value: `**➭ Leia as nossas regras: <#994744835183480987>**\n**➭ Pegue alguns cargos: <#994744835183480988>**\n**➭ Converse no chat: <#994744835862970433>**\n**➭ Use o nosso Bot: <#994964287942561813>**` })
         .setFooter({ text: `Membro nº: ${member.guild.memberCount}` });
     console.log("Novo membro: ", member);
-    member.guild.channels.cache.get("994744835183480986").send({ content: `${member.user}`, embeds: [EmbedWelcome] });
+    member.guild.channels.cache.get("994744835183480986").send({ content: `${member.user}`, embeds: [EmbedWelcome] }).then(
+        client.user.setActivity(`${membros} membros na Akademiya!`, { type: ActivityType.Watching })
+    );
 });
 
 const EmbedRegras = new EmbedBuilder()
@@ -181,7 +196,6 @@ client.on('messageCreate', msg => {
         msg.channel.send({ embeds: [EmbedRegras] });
     }
 });
-
 
 
 
@@ -221,7 +235,6 @@ client.on('interactionCreate', async interaction => {
         await command.execute(interaction);
     } catch (error) {
         console.error(error);
-        await interaction.reply({ content: 'Erro ao executar seu comando!\nTente novamente conferindo a SINTAX do comando.\n\nCaso o erro persista, entre em contato com <@407649282200436738>', ephemeral: true });
     }
 });
 

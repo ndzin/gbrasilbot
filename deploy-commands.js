@@ -18,3 +18,7 @@ const rest = new REST({ version: '10' }).setToken(token);
 rest.put(Routes.applicationCommands(clientId, guildId), { body: commands })
 	.then(() => console.log('Comandos atualizados com sucesso.'))
 	.catch(console.error);
+
+// rest.delete(Routes.applicationCommand(clientId, '1013227822753521735'))
+// 	.then(() => console.log('Comando deletado com sucesso.'))
+// 	.catch(console.error);
