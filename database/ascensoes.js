@@ -4,7 +4,7 @@ const EmbedTighnari = new EmbedBuilder()
     .setColor(0x243822)
     .setAuthor({ name: 'Tighnari ✦ Guia de Ascensão' })
     .setDescription("\u200b")
-    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_n1069.png')
+    .setThumbnail('https://ndzin.github.io/db/char/cards/tighnari.webp')
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
         { name: 'Elemento', value: 'Dendro', inline: true },
@@ -17,7 +17,7 @@ const EmbedCyno = new EmbedBuilder()
     .setColor(0x3816b5)
     .setAuthor({ name: 'Cyno ✦ Guia de Ascensão' })
     .setDescription("\u200b")
-    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_n1071.webp')
+    .setThumbnail('https://ndzin.github.io/db/char/cards/cyno.webp')
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
         { name: 'Elemento', value: 'Electro', inline: true },
@@ -30,7 +30,7 @@ const EmbedShogun = new EmbedBuilder()
     .setColor(0x262549)
     .setAuthor({ name: 'Raiden Shogun ✦ Guia de Ascensão' })
     .setDescription("\u200b")
-    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_6040.webp')
+    .setThumbnail('https://ndzin.github.io/db/char/cards/shogun.webp')
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
         { name: 'Elemento', value: 'Electro', inline: true },
@@ -43,7 +43,7 @@ const EmbedYaeMiko = new EmbedBuilder()
     .setColor(0x391921)
     .setAuthor({ name: 'Yae Miko ✦ Guia de Ascensão' })
     .setDescription("\u200b")
-    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_6049.webp')
+    .setThumbnail('https://ndzin.github.io/db/char/cards/yae.webp')
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
         { name: 'Elemento', value: 'Electro', inline: true },
@@ -56,7 +56,7 @@ const EmbedKeqing = new EmbedBuilder()
     .setColor(0x1e1d4e)
     .setAuthor({ name: 'Keqing ✦ Guia de Ascensão' })
     .setDescription("\u200b")
-    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_6030.webp')
+    .setThumbnail('https://ndzin.github.io/db/char/cards/keqing.webp')
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
         { name: 'Elemento', value: 'Electro', inline: true },
@@ -67,23 +67,49 @@ const EmbedKeqing = new EmbedBuilder()
 
 
 const EmbedXiao = new EmbedBuilder()
-    .setColor(0x1e1d4e)
-    .setAuthor({ name: 'Keqing ✦ Guia de Ascensão' })
+    .setColor(0x00292c)
+    .setAuthor({ name: 'Xiao ✦ Guia de Ascensão' })
     .setDescription("\u200b")
-    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_6030.webp')
+    .setThumbnail('https://ndzin.github.io/db/char/cards/xiao.webp')
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
-        { name: 'Elemento', value: 'Electro', inline: true },
+        { name: 'Elemento', value: 'Anemo', inline: true },
     )
-    .addFields({ name: 'Arma', value: 'Espada', inline: true })
+    .addFields({ name: 'Arma', value: 'Lança', inline: true })
     .setImage('https://ndzin.github.io/db/ascension/ASC_Polearm_Xiao.png')
     .setFooter({ text: '@genshin_brasil', });
+
+const EmbedVenti = new EmbedBuilder()
+    .setColor(0x00333a)
+    .setAuthor({ name: 'Venti ✦ Guia de Ascensão' })
+    .setDescription("\u200b")
+    .setThumbnail('https://ndzin.github.io/db/char/cards/venti.webp')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Anemo', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Arco', inline: true })
+    .setImage('https://ndzin.github.io/db/ascension/ASC_Bow_Venti.png')
+    .setFooter({ text: '@genshin_brasil', });
+
+    const EmbedKazuha = new EmbedBuilder()
+    .setColor(0x122225)
+    .setAuthor({ name: 'Kaedehara Kazuha ✦ Guia de Ascensão' })
+    .setDescription("\u200b")
+    .setThumbnail('https://ndzin.github.io/db/char/cards/kazuha.webp')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Anemo', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Espada', inline: true })
+    .setImage('https://ndzin.github.io/db/ascension/ASC_Sword_Kazuha.png')
+    .setFooter({ text: '@genshin_brasil', })
 
 const Embeds = {
     xiao: EmbedXiao,
     // jean: EmbedJean,
-    // kazuha: EmbedKazuha,
-    // venti: EmbedVenti,
+    kazuha: EmbedKazuha,
+    venti: EmbedVenti,
     // sayu: EmbedSayu,
     // heizou: EmbedHeizou,
     // sucrose: EmbedSucrose,
