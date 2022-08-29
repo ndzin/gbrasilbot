@@ -10,7 +10,7 @@ const EmbedTighnari = new EmbedBuilder()
         { name: 'Elemento', value: 'Dendro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://raw.githubusercontent.com/ndzin/akademiya-database/main/db/ascension/ASC_Bow_Tighnari.png')
+    .setImage('https://ndzin.github.io/db/ascension/ASC_Bow_Tighnari.png')
     .setFooter({ text: '@genshin_brasil', });
 
 const EmbedCyno = new EmbedBuilder()
@@ -23,7 +23,7 @@ const EmbedCyno = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://raw.githubusercontent.com/ndzin/akademiya-database/main/db/ascension/ASC_Cyno.png')
+    .setImage('https://ndzin.github.io/db/ascension/ASC_Cyno.png')
     .setFooter({ text: '@genshin_brasil', });
 
 const EmbedShogun = new EmbedBuilder()
@@ -36,7 +36,7 @@ const EmbedShogun = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://raw.githubusercontent.com/ndzin/akademiya-database/main/db/ascension/ASC_Shogun.png')
+    .setImage('https://ndzin.github.io/db/ascension/ASC_Shogun.png')
     .setFooter({ text: '@genshin_brasil', });
 
 const EmbedYaeMiko = new EmbedBuilder()
@@ -49,7 +49,7 @@ const EmbedYaeMiko = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://raw.githubusercontent.com/ndzin/akademiya-database/main/db/ascension/ASC_Catalyst_Yaemiko.png')
+    .setImage('https://ndzin.github.io/db/ascension/ASC_Catalyst_Yaemiko.png')
     .setFooter({ text: '@genshin_brasil', });
 
 const EmbedKeqing = new EmbedBuilder()
@@ -62,12 +62,25 @@ const EmbedKeqing = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://raw.githubusercontent.com/ndzin/akademiya-database/main/db/ascension/ASC_Sword_Keqing.png')
-    .setFooter({ text: '@genshin_brasil', });\
+    .setImage('https://ndzin.github.io/db/ascension/ASC_Sword_Keqing.png')
+    .setFooter({ text: '@genshin_brasil', });
 
+
+const EmbedXiao = new EmbedBuilder()
+    .setColor(0x1e1d4e)
+    .setAuthor({ name: 'Keqing ✦ Guia de Ascensão' })
+    .setDescription("\u200b")
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_6030.webp')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Electro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Espada', inline: true })
+    .setImage('https://ndzin.github.io/db/ascension/ASC_Polearm_Xiao.png')
+    .setFooter({ text: '@genshin_brasil', });
 
 const Embeds = {
-    // xiao: EmbedXiao,
+    xiao: EmbedXiao,
     // jean: EmbedJean,
     // kazuha: EmbedKazuha,
     // venti: EmbedVenti,
