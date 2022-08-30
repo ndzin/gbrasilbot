@@ -1,6 +1,8 @@
 const { SlashCommandBuilder, Message, CommandInteractionOptionResolver } = require('discord.js');
+const Canvas = require('@napi-rs/canvas');
 
 module.exports = {
+
     data: new SlashCommandBuilder()
         .setName('dev')
         .setDescription('dev command')
@@ -19,6 +21,7 @@ module.exports = {
 
     async execute(interaction) {
 
+
         const dev = interaction.member.roles.cache.has('1003009674968313866');
         const booster = interaction.member.roles.cache.has('1001494880348016791');
         if (dev || booster) {
@@ -27,7 +30,7 @@ module.exports = {
                 const build = buildget.toLocaleLowerCase();
                 let uid = interaction.options.getString('uid');
 
-                if ( uid.length != 9) {
+                if (uid.length != 9) {
                     await interaction.reply(`O UID ${uid} está no tamanho errado!`)
                 } else {
                     console.log(uid)
@@ -57,13 +60,20 @@ module.exports = {
                         await interaction.reply(`O UID ${uid} é inválido!`)
                     }
                     if (uid) {
-                        await interaction.reply(`Build ${build} do membro ${uid} cujo servidor é ${uid_region}!`)
+                        const canvas = Canvas.createCanvas(700, 250);
+                        const context = canvas.getContext('2d');
+                        const background = await Canvas.loadImage(`../database/Cards/${build}.png`);
+
+                        context.drawImage(background, 0, 0, canvas.width, canvas.height);
+                        const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'charinfo.png' });
+                        console.log(attachment)
+                        await interaction.reply(attachment);
                     } else {
                         await interaction.reply(build)
                     }
                 }
 
-                
+
             } catch {
                 await interaction.reply('**・Comando utilizado de maneira errônea!**\n┗ *Para mais detalhes, digite **/help build.***');
             }
