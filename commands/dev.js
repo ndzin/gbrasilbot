@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, Message, CommandInteractionOptionResolver } = require('discord.js');
+const { SlashCommandBuilder, Message, CommandInteractionOptionResolver, DiscordAPIError, AttachmentBuilder } = require('discord.js');
 const Canvas = require('@napi-rs/canvas');
 
 module.exports = {
@@ -26,8 +26,9 @@ module.exports = {
         const booster = interaction.member.roles.cache.has('1001494880348016791');
         if (dev || booster) {
             try {
-                const buildget = interaction.options.get('personagem').value;
+                const buildget = interaction.options.getString('personagem');
                 const build = buildget.toLocaleLowerCase();
+                console.log(build)
                 let uid = interaction.options.getString('uid');
 
                 if (uid.length != 9) {
@@ -59,27 +60,37 @@ module.exports = {
                     } else {
                         await interaction.reply(`O UID ${uid} é inválido!`)
                     }
-                    if (uid) {
-                        const canvas = Canvas.createCanvas(700, 250);
-                        const context = canvas.getContext('2d');
-                        const background = await Canvas.loadImage(`../database/Cards/${build}.png`);
-
-                        context.drawImage(background, 0, 0, canvas.width, canvas.height);
-                        const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'charinfo.png' });
-                        console.log(attachment)
-                        await interaction.reply(attachment);
-                    } else {
-                        await interaction.reply(build)
-                    }
                 }
+                if (uid) {
+
+                    const canvas = Canvas.createCanvas(840, 400);
+                    const context = canvas.getContext('2d');
+
+                    const bg = await Canvas.loadImage(`C:/Users/Neith/Documents/G. Akademiya/database/Cards/${build}.png`)
+
+                    context.drawImage(bg, 0, 0, 840, 400);
+                    function capitalizeFirstLetter(string) {
+                        return string.charAt(0).toUpperCase() + string.slice(1);
+                      }
+                    const buildCapital = capitalizeFirstLetter(build);
+                    const perso = await Canvas.loadImage(`https://api.ambr.top/assets/UI/UI_Gacha_AvatarImg_${buildCapital}.png`);
+                    
+
+                    context.drawImage(perso, -150, 25, 750, 400);
 
 
+                    const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'charbuild.png' });
+                    
+
+                    interaction.reply({ files: [attachment] });
+                } else {
+                    await interaction.reply(build)
+                }
             } catch {
                 await interaction.reply('**・Comando utilizado de maneira errônea!**\n┗ *Para mais detalhes, digite **/help build.***');
             }
         } else {
             interaction.reply({ content: `Sem permissões mínimas! Você precisa ter o cargo <@&1005255209334865950> para executar esse comando.`, ephemeral: true });
-
         }
     }
 }
