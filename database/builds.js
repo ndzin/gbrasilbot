@@ -10,7 +10,7 @@ const EmbedXiao = new EmbedBuilder()
         { name: 'Elemento', value: 'Anemo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://i.imgur.com/r1qt2YY.jpg')
+    .setImage('https://ndzin.github.io/db/builds/Anemo/xiao.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -24,7 +24,7 @@ const EmbedJean = new EmbedBuilder()
         { name: 'Elemento', value: 'Anemo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/VK9DzPx.png')
+    .setImage('https://ndzin.github.io/db/builds/Anemo/jean.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -38,7 +38,7 @@ const EmbedKazuha = new EmbedBuilder()
         { name: 'Elemento', value: 'Anemo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/ikrrXQg.png')
+    .setImage('https://ndzin.github.io/db/builds/Anemo/kazuha.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil' });
 
@@ -52,7 +52,7 @@ const EmbedSayu = new EmbedBuilder()
         { name: 'Elemento', value: 'Anemo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espadão', inline: true })
-    .setImage('https://i.imgur.com/E9nyULv.jpg')
+    .setImage('https://ndzin.github.io/db/builds/Anemo/sayu.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -66,7 +66,7 @@ const EmbedHeizou = new EmbedBuilder()
         { name: 'Elemento', value: 'Anemo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/5ODAKMT.jpg')
+    .setImage('https://ndzin.github.io/db/builds/Anemo/heizou.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -80,7 +80,7 @@ const EmbedVenti = new EmbedBuilder()
         { name: 'Elemento', value: 'Anemo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/N607elM.jpg')
+    .setImage('https://ndzin.github.io/db/builds/Anemo/venti.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -94,7 +94,7 @@ const EmbedSucrose = new EmbedBuilder()
         { name: 'Elemento', value: 'Anemo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/eL6q5e9.jpg')
+    .setImage('https://ndzin.github.io/db/builds/Anemo/sucrose.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -110,7 +110,7 @@ const EmbedAloy = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/5KLO8fR.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/aloy.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -124,7 +124,7 @@ const EmbedAyaka = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/l8QqnUm.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/ayaka.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -138,7 +138,7 @@ const EmbedEula = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espadão', inline: true })
-    .setImage('https://i.imgur.com/2Obt8ah.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/eula.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -152,7 +152,7 @@ const EmbedQiqi = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/PaeHipv.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/qiqi.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -166,7 +166,7 @@ const EmbedShenhe = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://i.imgur.com/FuUtVWb.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/shenhe.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -180,7 +180,7 @@ const EmbedChongyun = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espadão', inline: true })
-    .setImage('https://i.imgur.com/lWS040K.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/chongyun.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -194,7 +194,7 @@ const EmbedDiona = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/ZzHrFH4.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/diona.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -208,7 +208,7 @@ const EmbedRosaria = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://i.imgur.com/nJzFegS.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/rosaria.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -222,7 +222,7 @@ const EmbedKaeya = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/Y3DCzeq.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/kaeya.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -236,7 +236,7 @@ const EmbedGanyuF = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/Shi0siE.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/ganyu_freeze.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -250,7 +250,7 @@ const EmbedGanyuM = new EmbedBuilder()
         { name: 'Elemento', value: 'Cryo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/1HARJft.jpg')
+    .setImage('https://ndzin.github.io/db/builds/cryo/ganyu_melt.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -260,27 +260,29 @@ const EmbedKeqing = new EmbedBuilder()
     .setColor(0x201646)
     .setAuthor({ name: 'Keqing ✦ DPS Build' })
     .setDescription('*Keqing é a Yuheng do Qixing de Liyue. Ela é alguém que procura suas próprias respostas ao invés de deixar o caos acontecer em Liyue. Keqing escolhe seu próprio caminho com seu próprio poder e habilidade, ao invés de deixar os Deuses escolherem seu caminho.*')
-    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_6030.png')
+    .setThumbnail(`https://ndzin.github.io/db/char/cards/keqing.webp`)
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/MEwqcxw.jpg')
+    .setImage('https://ndzin.github.io/db/builds/electro/keqing.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
+
+const buildshogun = 'https://ndzin.github.io/db/builds/electro/shogun.png'
 
 const EmbedShogun = new EmbedBuilder()
     .setColor(0x32215b)
     .setAuthor({ name: 'Raiden Shogun ✦ Battery Build' })
     .setDescription('*Sua Excelência, a Toda Poderosa Narukami Ogosho, que prometeu ao povo de Inazuma uma Eternidade imutável.*')
-    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_6040.png')
+    .setThumbnail('https://ndzin.github.io/db/char/cards/shogun.webp')
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://i.imgur.com/tC7jLyv.jpg')
+    .setImage(buildshogun)
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -294,7 +296,7 @@ const EmbedYaeMiko = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/0lvi7ZC.jpg')
+    .setImage('https://ndzin.github.io/db/builds/electro/yaemiko.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -308,7 +310,7 @@ const EmbedBeidou = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espadão', inline: true })
-    .setImage('https://i.imgur.com/Zkuwbji.jpg')
+    .setImage('https://ndzin.github.io/db/builds/electro/beidou.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -322,7 +324,7 @@ const EmbedFischl = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/sttRqG6.jpg')
+    .setImage('https://ndzin.github.io/db/builds/electro/fischl.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -336,7 +338,7 @@ const EmbedShinobu = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/ozhkDex.jpg')
+    .setImage('https://ndzin.github.io/db/builds/electro/shinobu.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -350,7 +352,7 @@ const EmbedLisa = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/5EaoXHV.jpg')
+    .setImage('https://ndzin.github.io/db/builds/electro/lisa.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -364,7 +366,7 @@ const EmbedRazor = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espadão', inline: true })
-    .setImage('https://i.imgur.com/aZqPSoX.jpg')
+    .setImage('https://ndzin.github.io/db/builds/electro/razor.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -378,7 +380,7 @@ const EmbedSara = new EmbedBuilder()
         { name: 'Elemento', value: 'Electro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/T6jCBdD.jpg')
+    .setImage('https://ndzin.github.io/db/builds/electro/sara.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -394,7 +396,7 @@ const EmbedAlbedo = new EmbedBuilder()
         { name: 'Elemento', value: 'Geo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/qI3ojxz.jpg')
+    .setImage('https://ndzin.github.io/db/builds/geo/albedo.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -408,7 +410,7 @@ const EmbedItto = new EmbedBuilder()
         { name: 'Elemento', value: 'Geo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espadão', inline: true })
-    .setImage('https://i.imgur.com/iNAHixS.jpg')
+    .setImage('https://ndzin.github.io/db/builds/geo/itto.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -422,7 +424,7 @@ const EmbedZhongli = new EmbedBuilder()
         { name: 'Elemento', value: 'Geo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://i.imgur.com/aJzf2Ry.jpg')
+    .setImage('https://ndzin.github.io/db/builds/geo/zhongli.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -436,7 +438,7 @@ const EmbedGorou = new EmbedBuilder()
         { name: 'Elemento', value: 'Geo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/Kl5J0wf.jpg')
+    .setImage('https://ndzin.github.io/db/builds/geo/gorou.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -450,7 +452,7 @@ const EmbedNingguang = new EmbedBuilder()
         { name: 'Elemento', value: 'Geo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/EhqKfVj.jpg')
+    .setImage('https://ndzin.github.io/db/builds/geo/ningguang.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -464,7 +466,7 @@ const EmbedYunjin = new EmbedBuilder()
         { name: 'Elemento', value: 'Geo', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://i.imgur.com/cBkBGIM.jpg')
+    .setImage('https://ndzin.github.io/db/builds/geo/yunjin.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -480,7 +482,7 @@ const EmbedAyato = new EmbedBuilder()
         { name: 'Elemento', value: 'Hydro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/V4eNyGN.jpg')
+    .setImage('https://ndzin.github.io/db/builds/hydro/ayato.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -494,7 +496,7 @@ const EmbedKokomi = new EmbedBuilder()
         { name: 'Elemento', value: 'Hydro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/P39crpH.jpg')
+    .setImage('https://ndzin.github.io/db/builds/hydro/kokomi.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -508,7 +510,7 @@ const EmbedMonaNUKE = new EmbedBuilder()
         { name: 'Elemento', value: 'Hydro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/9zs9P7q.jpg')
+    .setImage('https://ndzin.github.io/db/builds/hydro/mona_nuke.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -522,7 +524,7 @@ const EmbedMonaF = new EmbedBuilder()
         { name: 'Elemento', value: 'Hydro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/9BLVACP.jpg')
+    .setImage('https://ndzin.github.io/db/builds/hydro/mona_freeze.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -536,7 +538,7 @@ const EmbedTartaglia = new EmbedBuilder()
         { name: 'Elemento', value: 'Hydro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/ZxQPgnM.jpg')
+    .setImage('https://ndzin.github.io/db/builds/hydro/tartaglia.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -550,7 +552,7 @@ const EmbedYelan = new EmbedBuilder()
         { name: 'Elemento', value: 'Hydro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/wd7pxj1.png')
+    .setImage('https://ndzin.github.io/db/builds/hydro/yelan.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -564,7 +566,7 @@ const EmbedBarbara = new EmbedBuilder()
         { name: 'Elemento', value: 'Hydro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/aqmJeZu.jpg')
+    .setImage('https://ndzin.github.io/db/builds/hydro/barbara.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -578,7 +580,7 @@ const EmbedXingqiu = new EmbedBuilder()
         { name: 'Elemento', value: 'Hydro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/3SzEDGx.jpg')
+    .setImage('https://ndzin.github.io/db/builds/hydro/xingqiu.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -594,7 +596,7 @@ const EmbedDiluc = new EmbedBuilder()
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espadão', inline: true })
-    .setImage('https://i.imgur.com/UCybao2.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/diluc.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -608,7 +610,7 @@ const EmbedHutao = new EmbedBuilder()
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://i.imgur.com/WReWmWG.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/hutao.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -622,7 +624,7 @@ const EmbedKlee = new EmbedBuilder()
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/pzdazY4.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/klee.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -636,7 +638,7 @@ const EmbedYoimiya = new EmbedBuilder()
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/hKXqJpW.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/yoimiya.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -644,13 +646,13 @@ const EmbedAmberDPS = new EmbedBuilder()
     .setColor(0x351a18)
     .setAuthor({ name: 'Amber ✦ Main DPS Build' })
     .setDescription('*Amber é a única Aventureira restante dos Cavaleiros de Favonius. Ela está sempre pronta para ajudar os cidadãos de Mondstadt - seja em algo simples ou talvez uma tarefa mais desafiadora.*')
-    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_6011.png')
+    .setThumbnail('https://ndzin.github.io/db/char/cards/amber.webp')
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/iGgl6qj.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/amber_dps.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -658,13 +660,13 @@ const EmbedAmberSUP = new EmbedBuilder()
     .setColor(0x351a18)
     .setAuthor({ name: 'Amber ✦ Support Build' })
     .setDescription('*Amber é a única Aventureira restante dos Cavaleiros de Favonius. Ela está sempre pronta para ajudar os cidadãos de Mondstadt - seja em algo simples ou talvez uma tarefa mais desafiadora.*')
-    .setThumbnail('https://enka.network/ui/UI_AvatarIcon_Amber.png')
+    .setThumbnail('https://ndzin.github.io/db/char/cards/amber.webp')
     .addFields(
         { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/TmlQRey.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/amber_sup.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -678,7 +680,7 @@ const EmbedBennett = new EmbedBuilder()
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espada', inline: true })
-    .setImage('https://i.imgur.com/l9BI5yc.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/bennett.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -692,7 +694,7 @@ const EmbedThoma = new EmbedBuilder()
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://i.imgur.com/avSJIIi.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/thoma.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -706,7 +708,7 @@ const EmbedXiangling = new EmbedBuilder()
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Lança', inline: true })
-    .setImage('https://i.imgur.com/AWhaTNI.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/xiangling.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -720,7 +722,7 @@ const EmbedXinyan = new EmbedBuilder()
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Espadão', inline: true })
-    .setImage('https://i.imgur.com/WtFf4kp.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/xinyan.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -734,7 +736,7 @@ const EmbedYanfei = new EmbedBuilder()
         { name: 'Elemento', value: 'Pyro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Catalisador', inline: true })
-    .setImage('https://i.imgur.com/PuPjdu7.jpg')
+    .setImage('https://ndzin.github.io/db/builds/pyro/yanfei.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -750,7 +752,7 @@ const EmbedCollei = new EmbedBuilder()
         { name: 'Elemento', value: 'Dendro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/kYBN5AL.jpg')
+    .setImage('https://ndzin.github.io/db/builds/dendro/collei.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
@@ -764,7 +766,7 @@ const EmbedTighnari = new EmbedBuilder()
         { name: 'Elemento', value: 'Dendro', inline: true },
     )
     .addFields({ name: 'Arma', value: 'Arco', inline: true })
-    .setImage('https://i.imgur.com/neXjn0Z.jpg')
+    .setImage('https://ndzin.github.io/db/builds/dendro/tighnari.png')
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 

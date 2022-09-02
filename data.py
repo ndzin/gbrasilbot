@@ -1,10 +1,10 @@
-import asyncio
-import genshinstats as gs
 
-gs.set_cookie_auto()
+import genshin
 
-async def main():
-    characters = await asyncio.to_thread(gs.get_characters, 710785423)
-    print(characters)
+client = genshin.Client()
+client.set_browser_cookies()
 
-asyncio.run(main())
+
+client = genshin.Client()
+cookies = client.login_with_password("canal.riasartz@gmail.com", "98014565ndw")
+print(cookies)

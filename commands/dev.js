@@ -63,7 +63,7 @@ module.exports = {
                 }
                 if (uid) {
 
-                    const canvas = Canvas.createCanvas(840, 400);
+                    const canvas = Canvas.createCanvas(2160, 1080);
                     const context = canvas.getContext('2d');
 
                     const bg = await Canvas.loadImage(`C:/Users/Neith/Documents/G. Akademiya/database/Cards/${build}.png`)
@@ -76,7 +76,7 @@ module.exports = {
                     const perso = await Canvas.loadImage(`https://api.ambr.top/assets/UI/UI_Gacha_AvatarImg_${buildCapital}.png`);
                     
 
-                    context.drawImage(perso, -150, 25, 750, 400);
+                    context.drawImage(perso, 0, 0, 2160, 1080);
 
 
                     const attachment = new AttachmentBuilder(await canvas.encode('png'), { name: 'charbuild.png' });

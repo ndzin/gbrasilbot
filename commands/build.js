@@ -15,6 +15,8 @@ module.exports = {
             const buildget = interaction.options.get('personagem').value;
             const build = buildget.toLocaleLowerCase();
             const char = Embeds[build]
+            console.log(char)
+            const build_img = char
 
             if (build === 'mona') {
                 const message = await interaction.reply({ embeds: [char], fetchReply: true });
