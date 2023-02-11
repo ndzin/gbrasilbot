@@ -44,8 +44,8 @@ module.exports = {
 
       let raridade =
         char.raridade === 5
-          ? "<:raridade2:1015412419188768959><:raridade2:1015412419188768959><:raridade2:1015412419188768959><:raridade2:1015412419188768959><:raridade2:1015412419188768959>"
-          : "<:raridade2:1015412419188768959><:raridade2:1015412419188768959><:raridade2:1015412419188768959><:raridade2:1015412419188768959>"
+          ? "⭐⭐⭐⭐⭐"
+          : "⭐⭐⭐⭐"
       let BuildEmbed = new EmbedBuilder()
         .setColor(char.corPrincipal)
         .setAuthor({ name: `${char.nome} ✦ ${char.tipoDeBuild}` })
@@ -55,14 +55,14 @@ module.exports = {
           { name: "Raridade", value: raridade, inline: true },
           {
             name: "Elemento",
-            value: `${emotes[char.elemento.toLowerCase()]} ${char.elemento}`,
+            value: `${char.elemento}`,
             inline: true,
           },
-          { name: "Arma", value: `${emotes[char.arma.toLowerCase()]} ${char.arma}`, inline: true }
+          { name: "Arma", value: `${char.arma}`, inline: true }
         )
         .setImage(char.imagem)
         .setTimestamp()
-        .setFooter({ text: "@genshin_brasil" })
+        .setFooter({ text: "Genshin Palace" })
 
       let pagina = 0
       let firstTimeBack = true

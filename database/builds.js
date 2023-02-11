@@ -770,6 +770,20 @@ const EmbedTighnari = new EmbedBuilder()
     .setTimestamp()
     .setFooter({ text: '@genshin_brasil', });
 
+const EmbedDori = new EmbedBuilder()
+    .setColor(0x243822)
+    .setAuthor({ name: 'Dori ✦ Sustainer Build' })
+    .setDescription("*Um jovem pesquisador que conhece bastante de botânica que atualmente atua como um Patrulheiro Florestal da Floresta Avidya. Ele é extremamente sincero com um bom coração — e muito bom na orientação até mesmo dos alunos mais monótonos.*")
+    .setThumbnail('https://genshin.honeyhunterworld.com/img/i_n1069.png')
+    .addFields(
+        { name: 'Raridade', value: '<:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327><:5Star:1003059303508361327>', inline: true },
+        { name: 'Elemento', value: 'Dendro', inline: true },
+    )
+    .addFields({ name: 'Arma', value: 'Arco', inline: true })
+    .setImage('https://ndzin.github.io/db/builds/dendro/tighnari.png')
+    .setTimestamp()
+    .setFooter({ text: '@genshin_brasil', });
+
 const Embeds = {
     xiao: EmbedXiao,
     jean: EmbedJean,
@@ -847,6 +861,7 @@ const Embeds = {
     feiyan: EmbedYanfei,
     tighnari: EmbedTighnari,
     collei: EmbedCollei,
+    dori: EmbedDori,
 }
 module.exports = Embeds
 

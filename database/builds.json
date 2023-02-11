@@ -302,7 +302,7 @@
   },
   "albedo": {
     "nome": "Albedo",
-    "tipoDeBuild": "O misterioso Albedo é o Chefe Alquimista e Capitão da Equipe de Investigação dos Cavaleiros de Favonius, com Sucrose como sua assistente. Ele tem um desejo infinito de aprender sobre o mundo de Teyvat, estudando cuidadosamente todos os objetos ao seu redor.",
+    "tipoDeBuild": "Sub DPS Build",
     "descricao": "O misterioso Albedo é o Chefe Alquimista e Capitão da Equipe de Investigação dos Cavaleiros de Favonius, com Sucrose como sua assistente. Ele tem um desejo infinito de aprender sobre o mundo de Teyvat, estudando cuidadosamente todos os objetos ao seu redor.",
     "thumbnail": "https://genshin.honeyhunterworld.com/img/i_6027.png",
     "imagem": "https://ndzin.github.io/db/builds/geo/albedo.png",
@@ -443,10 +443,10 @@
     "arma": "Catalisador",
     "corPrincipal": "0x00213a"
   },
-  "xinqiu": {
-    "nome": "Xinqiu",
+  "xingqiu": {
+    "nome": "Xingqiu",
     "tipoDeBuild": "Sub DPS Build",
-    "descricao": "Barbara é a Diaconisa da Igreja de Favonius e auto proclamada \"ídolo\" depois de aprender sobre eles com a intrépida aventureira Alice.",
+    "descricao": "Um jovem carregando uma espada longa que é frequentemente visto em estantes de livros. Ele tem um coração de ouro e anseia por justiça e equidade para todos.",
     "thumbnail": "https://genshin.honeyhunterworld.com/img/i_6015.png",
     "imagem": "https://ndzin.github.io/db/builds/hydro/xingqiu.png",
     "elemento": "Hydro",
@@ -555,7 +555,7 @@
     "elemento": "Pyro",
     "raridade": 4,
     "arma": "Espadão",
-    "corPrincipal": ""
+    "corPrincipal": "0x3f1500"
   },
   "yanfei": {
     "nome": "Yanfei",
@@ -589,5 +589,83 @@
     "raridade": 4,
     "arma": "Arco",
     "corPrincipal": "0x2B441D"
+  },
+  "dori": {
+    "nome": "Dori",
+    "tipoDeBuild": "Sustain Build",
+    "descricao": "Uma comerciante viajante imprevisível, cuja maior paixão é a Mora brilhante.",
+    "thumbnail": "https://ndzin.github.io/db/char/cards/dori.webp",
+    "imagem": "https://ndzin.github.io/db/builds/electro/Dori.png",
+    "elemento": "Electro",
+    "raridade": 4,
+    "arma": "Espadão",
+    "corPrincipal": "0x2c1648"
+  },
+  "cyno": {
+    "nome": "Cyno",
+    "tipoDeBuild": "Main DPS Build",
+    "descricao": "O General Mahamatra responsável por supervisionar os pesquisadores da Academia.\nDizem que quando ele está trabalhando, o General Mahamatra é ainda mais eficiente do que o \"Grande Vayuvyastra\" feito pelos Kshahrewar.",
+    "thumbnail": "https://ndzin.github.io/db/char/cards/cyno.webp",
+    "imagem": "https://ndzin.github.io/db/builds/electro/cyno.png",
+    "elemento": "Electro",
+    "raridade": 5,
+    "arma": "Lança",
+    "corPrincipal": "0x090a2e"
+  },
+  "candace": {
+    "nome": "Candace",
+    "tipoDeBuild": "Support Build",
+    "descricao": "Guardiã da Vila Aaru, descendente do Rei Deshret, seu olho esquerdo é da cor do âmbar.",
+    "thumbnail": "https://ndzin.github.io/db/char/cards/candace.webp",
+    "imagem": "https://ndzin.github.io/db/builds/hydro/candace.png",
+    "elemento": "Hydro",
+    "raridade": 4,
+    "arma": "Lança",
+    "corPrincipal": "0x00305b"
+  },
+  "nilou": {
+    "nome": "Nilou",
+    "tipoDeBuild": "Enabler Build",
+    "descricao": "A Estrela do Teatro Zubayr, ela é bondosa e inocente. Seu estilo de dança é alegre e elegante.",
+    "thumbnail": "https://ndzin.github.io/db/char/cards/nilou.webp",
+    "imagem": "https://ndzin.github.io/db/builds/hydro/nilou.png",
+    "elemento": "Hydro",
+    "raridade": 5,
+    "arma": "Espada",
+    "corPrincipal": "0x002144"
+  },
+  "nahida": {
+    "nome": "Nahida",
+    "tipoDeBuild": "Sub DPS Build",
+    "descricao": "Um pássaro enjaulado no Santuário de Surasthana, que só pode contemplar o mundo através de seus sonhos.",
+    "thumbnail": "https://ndzin.github.io/db/char/cards/nahida.webp",
+    "imagem": "https://ndzin.github.io/db/builds/dendro/nahida.png",
+    "elemento": "Dendro",
+    "raridade": 5,
+    "arma": "Catalisador",
+    "corPrincipal": "0x17352a"
+  },
+  "layla": {
+    "nome": "Layla",
+    "tipoDeBuild": "Sustain Build",
+    "descricao": "Estudante dos Rtawahist, especializada em astrologia teórica. Sofre de sonambulismo e insônia, ela está sempre enfrentando distúrbios de sono.",
+    "thumbnail": "https://ndzin.github.io/db/char/cards/layla.webp",
+    "imagem": "https://ndzin.github.io/db/builds/cryo/layla.png",
+    "elemento": "Cryo",
+    "raridade": 4,
+    "arma": "Espada",
+    "corPrincipal": "0x001f44"
+  },
+  "andarilho": {
+    "nome": "Andarilho",
+    "alias": ["wanderer", "trotamundos", "scaramouche"],
+    "tipoDeBuild": "Main DPS Build",
+    "descricao": "Um jovem andarilho de identidade misteriosa. Se veste como um shugenja, mas com certeza não age como um.",
+    "thumbnail": "https://ndzin.github.io/db/char/cards/wanderer.webp",
+    "imagem": "https://raw.githubusercontent.com/ndzin/ndzin.github.io/main/db/builds/anemo/wanderer.png",
+    "elemento": "Anemo",
+    "raridade": 5,
+    "arma": "Catalisador",
+    "corPrincipal": "0x001625"
   }
 }

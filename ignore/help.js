@@ -43,8 +43,8 @@ module.exports = {
         commandList += `**${commandIndex}・ ${command.name}**\n*${command.description}*\n`
     })
 
-    baseEmbed.setTitle("Lista de Comandos da Akademiya")
-    .setDescription(`*Bem-Vindo(a) a Akademiya, Aqui está uma lista de comandos que possam lhe ajudar*\n\n${commandList}`)
+    baseEmbed.setTitle("Lista de Comandos da GenshinPalace")
+    .setDescription(`*Bem-Vindo(a) ao GenshinPalace, Aqui está uma lista de comandos que possam lhe ajudar*\n\n${commandList}`)
     
     await interaction.reply({embeds: [baseEmbed]})
   },
